@@ -29,6 +29,10 @@ const brihtbraintallesblogImagesById: Record<number, number> = {
   3: require('../../assets/i/brihtbraintblog3.png'),
   4: require('../../assets/i/brihtbraintblog4.png'),
   5: require('../../assets/i/brihtbraintblog5.png'),
+  6: require('../../assets/i/brihtbraintblog1.png'),
+  7: require('../../assets/i/brihtbraintblog2.png'),
+  8: require('../../assets/i/brihtbraintblog3.png'),
+  9: require('../../assets/i/brihtbraintblog4.png'),
 };
 
 const brihtbraintallessavedFactsData = [
@@ -514,8 +518,8 @@ const Brihtbraintallessavd = () => {
                   </View>
                 ))}
               </ScrollView>
-
-              {brihtbraintallesshowSlider && (
+              {/* 
+              {!brihtbraintallesshowSlider && (
                 <View
                   style={styles.brihtbraintallessliderWrap}
                   pointerEvents="auto">
@@ -536,7 +540,7 @@ const Brihtbraintallessavd = () => {
                     />
                   </View>
                 </View>
-              )}
+              )} */}
             </>
           )}
         </ScrollView>
@@ -626,14 +630,14 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 16,
     paddingVertical: 18,
-    width: '90%',
+    width: '100%',
   },
   brihtbraintallescardBlog: {
     backgroundColor: '#5A0701',
     borderRadius: 16,
     padding: 16,
     paddingVertical: 18,
-    width: '90%',
+    width: '100%',
   },
   brihtbraintallescardBlogImage: {
     width: '100%',

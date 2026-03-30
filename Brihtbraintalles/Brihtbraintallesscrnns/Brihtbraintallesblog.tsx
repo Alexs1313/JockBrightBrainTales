@@ -23,6 +23,10 @@ const brihtbraintallesblogImagesById: Record<number, ImageSourcePropType> = {
   3: require('../../assets/i/brihtbraintblog3.png'),
   4: require('../../assets/i/brihtbraintblog4.png'),
   5: require('../../assets/i/brihtbraintblog5.png'),
+  6: require('../../assets/i/brihtbraintblog1.png'),
+  7: require('../../assets/i/brihtbraintblog2.png'),
+  8: require('../../assets/i/brihtbraintblog3.png'),
+  9: require('../../assets/i/brihtbraintblog4.png'),
 };
 
 const Brihtbraintallesblog = () => {

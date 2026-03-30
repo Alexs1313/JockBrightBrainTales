@@ -35,7 +35,7 @@ const brightbrainData = [
   {
     id: 4,
     headerTitle: `Guess the word`,
-    title: `Short stories about fruits and habits that are easy to understand and remember.`,
+    title: `Read a short riddle and choose the correct word.`,
     image: require('../../assets/i/brihtbraintallon4.png'),
     buttonText: 'Next',
   },
@@ -51,7 +51,9 @@ const brightbrainData = [
 const Brihtbraintallesonbr = () => {
   const navigation = useNavigation();
   const [brightbrainIndex, setBrightbrainIndex] = useState(0);
-  const {height} = useWindowDimensions();
+  const {height, width} = useWindowDimensions();
+
+  const isLandscape = height < width;
 
   const brightbrainNext = () => {
     brightbrainIndex === 4
@@ -61,7 +63,11 @@ const Brihtbraintallesonbr = () => {
   return (
     <Brihtbraintalleslayot>
       <View style={styles.brihtbrainecontainer}>
-        <View style={[styles.brihtbraintallesheader, {height: height * 0.15}]}>
+        <View
+          style={[
+            styles.brihtbraintallesheader,
+            {height: isLandscape ? 90 : 130},
+          ]}>
           <Text style={styles.brihtbraintallestext}>
             {brightbrainData[brightbrainIndex].headerTitle}
           </Text>
@@ -73,7 +79,11 @@ const Brihtbraintallesonbr = () => {
             source={brightbrainData[brightbrainIndex].image}
             style={brightbrainIndex === 3 && {marginBottom: 50}}
           />
-          <View style={[styles.brihtbrainbottomsheet, {height: height * 0.26}]}>
+          <View
+            style={[
+              styles.brihtbrainbottomsheet,
+              {height: isLandscape ? 230 : 250},
+            ]}>
             <Text style={styles.brihtbraintallestitle}>
               {brightbrainData[brightbrainIndex].title}
             </Text>
@@ -100,12 +110,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingTop: 40,
+    paddingTop: 30,
     backgroundColor: '#BD0709',
     width: '100%',
     borderBottomLeftRadius: 32,
     borderBottomRightRadius: 32,
     height: 150,
+    paddingBottom: 5,
   },
   brihtbraintallestitle: {
     fontSize: 16,
@@ -125,7 +136,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingTop: 25,
-    paddingBottom: 50,
+    paddingBottom: 40,
     backgroundColor: '#BD0709',
     width: '100%',
     height: 250,

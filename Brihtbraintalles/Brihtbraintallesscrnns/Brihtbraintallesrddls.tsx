@@ -522,8 +522,9 @@ const styles = StyleSheet.create({
   },
   brihtbraintallesoptionText: {
     fontFamily: 'Raleway-Black',
-    fontSize: 18,
+    fontSize: 17,
     color: '#5A0701',
+    textAlign: 'center',
   },
   brihtbraintallesoptionTextInactive: {
     color: '#FFD61C',

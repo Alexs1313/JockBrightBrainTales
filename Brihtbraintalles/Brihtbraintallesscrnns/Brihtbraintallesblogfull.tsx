@@ -25,6 +25,10 @@ const brihtbraintallesblogImagesById: Record<number, ImageSourcePropType> = {
   3: require('../../assets/i/brihtbraintblog3.png'),
   4: require('../../assets/i/brihtbraintblog4.png'),
   5: require('../../assets/i/brihtbraintblog5.png'),
+  6: require('../../assets/i/brihtbraintblog1.png'),
+  7: require('../../assets/i/brihtbraintblog2.png'),
+  8: require('../../assets/i/brihtbraintblog3.png'),
+  9: require('../../assets/i/brihtbraintblog4.png'),
 };
 
 const Brihtbraintallesblogfull = () => {
@@ -104,7 +108,8 @@ const Brihtbraintallesblogfull = () => {
     [brihtbraintallesshowSlider, brihtbraintallesmaxScroll],
   );
 
-  brihtbraintallesscrollToProgressRef.current = brihtbraintallesscrollToProgress;
+  brihtbraintallesscrollToProgressRef.current =
+    brihtbraintallesscrollToProgress;
 
   const brihtbraintallespanResponder = useRef(
     PanResponder.create({
@@ -306,27 +311,6 @@ const Brihtbraintallesblogfull = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-
-      {brihtbraintallesshowSlider && (
-        <View style={styles.brihtbraintallessliderWrap} pointerEvents="auto">
-          <View
-            style={[
-              styles.brihtbraintallessliderTrack,
-              {height: brihtbraintallestrackHeight},
-            ]}
-            {...brihtbraintallespanResponder.panHandlers}>
-            <View
-              style={[
-                styles.brihtbraintallessliderThumb,
-                {
-                  height: brihtbraintallesthumbHeight,
-                  transform: [{translateY: brihtbraintallesthumbTop}],
-                },
-              ]}
-            />
-          </View>
-        </View>
-      )}
     </View>
   );
 };
@@ -338,6 +322,8 @@ const styles = StyleSheet.create({
   },
   brihtbraintallesscrollContent: {
     flexGrow: 1,
+    paddingTop: 50,
+    paddingBottom: 20,
   },
   brihtbraintallescontainer: {
     flex: 1,

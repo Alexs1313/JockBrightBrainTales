@@ -417,8 +417,9 @@ const styles = StyleSheet.create({
   },
   brihtbraintallesOptionText: {
     fontFamily: 'Raleway-Black',
-    fontSize: 16,
+    fontSize: 15,
     color: '#5A0701',
+    textAlign: 'center',
   },
   brihtbraintallesDoneWrap: {
     flex: 1,
