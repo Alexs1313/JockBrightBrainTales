@@ -392,7 +392,7 @@ const styles = StyleSheet.create({
     borderColor: '#BD0709',
   },
   brihtbraintallescloseWrap: {
-    marginTop: 28,
+    marginTop: 27,
     alignSelf: 'center',
     paddingVertical: 8,
   },
