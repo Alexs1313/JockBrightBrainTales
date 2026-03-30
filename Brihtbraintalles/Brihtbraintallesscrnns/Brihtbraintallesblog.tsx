@@ -15,7 +15,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {brihtbraintallesstoriesData} from '../Brihtbraintallescpntts/Brihtbraintallesstoriesdata';
+import {brihtbraintallesblogData} from '../Brihtbraintallescpntts/Brihtbraintallesblogdata';
 
 const brihtbraintallesblogImagesById: Record<number, ImageSourcePropType> = {
   1: require('../../assets/i/brihtbraintblog1.png'),
@@ -187,7 +187,7 @@ const Brihtbraintallesblog = () => {
           scrollEventThrottle={16}
           contentContainerStyle={styles.brihtbraintalleslistWrap}
           showsVerticalScrollIndicator={false}>
-          {brihtbraintallesstoriesData.map(story => (
+          {brihtbraintallesblogData.map(story => (
             <View key={story.id} style={styles.brihtbraintallescard}>
               <Image
                 source={brihtbraintallesblogImagesById[story.id]}

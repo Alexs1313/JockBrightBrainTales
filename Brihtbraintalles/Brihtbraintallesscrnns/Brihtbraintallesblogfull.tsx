@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {brihtbraintallesstoriesData} from '../Brihtbraintallescpntts/Brihtbraintallesstoriesdata';
+import {brihtbraintallesblogData} from '../Brihtbraintallescpntts/Brihtbraintallesblogdata';
 
 const SAVED_BLOG_KEY = 'brihtbraintalles_saved_blog';
 
@@ -53,9 +53,9 @@ const Brihtbraintallesblogfull = () => {
 
   const brihtbraintallesstory = useMemo(
     () =>
-      brihtbraintallesstoriesData.find(
+      brihtbraintallesblogData.find(
         item => item.id === brihtbraintallesstoryId,
-      ) ?? brihtbraintallesstoriesData[0],
+      ) ?? brihtbraintallesblogData[0],
     [brihtbraintallesstoryId],
   );
 

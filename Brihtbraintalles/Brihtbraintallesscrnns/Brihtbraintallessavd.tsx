@@ -1,6 +1,7 @@
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {brihtbraintallesstoriesData} from '../Brihtbraintallescpntts/Brihtbraintallesstoriesdata';
+import {brihtbraintallesblogData} from '../Brihtbraintallescpntts/Brihtbraintallesblogdata';
 import {useCallback, useRef, useState} from 'react';
 import {
   View,
@@ -133,7 +134,7 @@ const Brihtbraintallessavd = () => {
   const brihtbraintallessavedStories = brihtbraintallesstoriesData.filter(
     story => brihtbraintallessavedStoryIds.includes(story.id),
   );
-  const brihtbraintallessavedBlogStories = brihtbraintallesstoriesData.filter(
+  const brihtbraintallessavedBlogStories = brihtbraintallesblogData.filter(
     story => brihtbraintallessavedBlogIds.includes(story.id),
   );
 
